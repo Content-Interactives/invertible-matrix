@@ -1,12 +1,38 @@
-# React + Vite
+# Invertible Matrix Interactive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite + React SPA for **3×3** matrix pairs: check whether two matrices are inverses (identity product) with bracket UI and predefined examples.
 
-Currently, two official plugins are available:
+**Live:** served under GitHub Pages with `base: '/invertible-matrix/'` (e.g. `https://content-interactives.github.io/invertible-matrix/`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## Expanding the ESLint configuration
+- React 19, Vite 6
+- Tailwind CSS 3, PostCSS
+- Lucide React
+- `gh-pages`
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Setup
+
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+| Command | Description |
+|--------|-------------|
+| `npm run dev` | Dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview `dist/` |
+| `npm run lint` | ESLint |
+| `npm run deploy` | Build + GitHub Pages |
+
+## Layout
+
+- `src/App.jsx` — mounts `InvertibleMatrix`
+- `src/components/InvertibleMatrix.jsx` — matrix UI and logic
+
+## Configuration
+
+`vite.config.js`: `base: '/invertible-matrix/'`.
